@@ -17,6 +17,11 @@ const EffectComponent = () => {
     useEffect(() => {
         getData()
     }, [])
+// useEffect (function, [dependency]) //
+
+// If no dependency: Runs on every render
+// If empty array: Runs only on the first render
+// If props or state values: Runs on the first render and any time any dependency value changes
 
     return (
         <div className='card'>

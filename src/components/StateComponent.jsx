@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 const StateComponent = () => {
     const [userInput, setUserInput] = useState("")
-
+// const [the current state, function that updates the state] = useState(initial state) //
     const handleUpdateState = (e) => {setUserInput(e.target.value)}
 
   return (
