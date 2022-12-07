@@ -23,5 +23,5 @@ const BoilerplateContextProvider = (props) => {
     )
 }
 
-// export defaualt BoilerplateContext 
+// export default BoilerplateContext 
 // export {BoilerplateContextProvider}
