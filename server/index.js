@@ -39,6 +39,23 @@ server.get('/api/user/:id', async (req, res) => {
     }
 })
 
+server.get('/cart/:userId', async (req, res) => {
+    const {userId} = req.params
+    try {
+        let cart = await Cart.findAll({
+            where: {userId},
+            include: [{
+                model: User,
+                attributes: ["username"],
+                required: true
+            }, Product]
+        })
+        res.status(200).send(cart)
+    } catch {
+        res.status(400).send("we had an error...")
+    }
+})
+
 db
 .sync()
 // .sync({force: true})
